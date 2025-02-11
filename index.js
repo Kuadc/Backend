@@ -3,8 +3,12 @@ import express from "express";
 import { moviesRouter } from "./routes/moviesRouter.js";
 import { connectDB } from "./config/connectDB.js";
 
-process.loadEnvFile()
+// para antiguas versiones de nodejs. por ej.v.18
+import { config } from "dotenv";
+config()
 
+//para nodejs 20 en adelante no necesita dotenv
+// process.loadEnvFile()
 const PORT = process.env.PORT
 
 const app = express();

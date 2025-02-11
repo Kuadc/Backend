@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
 
-process.loadEnvFile()
+import { config } from "dotenv";
+config()
+//process.loadEnvFile()
 
 const URIDB = process.env.URI_BD
 
