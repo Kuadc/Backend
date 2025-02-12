@@ -2,6 +2,8 @@ import express from "express";
 
 import { moviesRouter } from "./routes/moviesRouter.js";
 import { connectDB } from "./config/connectDB.js";
+import cors from "cors"
+
 
 // para antiguas versiones de nodejs. por ej.v.18
 import { config } from "dotenv";
@@ -13,6 +15,7 @@ const PORT = process.env.PORT
 
 const app = express();
 app.use(express.json());
+app.use(cors())
 
 
 //endpoint ( obtiene el index)
